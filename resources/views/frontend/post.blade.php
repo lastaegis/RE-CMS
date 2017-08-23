@@ -40,6 +40,22 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="sixteen wide column">
+                <div class="ui segment">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9789.68769442624!2d112.77512436406448!3d-7.295478967442636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd8af3455d3857a9e!2sKober+Mie+Setan+Semolowaru!5e0!3m2!1sen!2sid!4v1503500778308" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="light-gallery">
+            @for($i = 0; $i < 8; $i++)
+            <div class="four wide column" style="padding-bottom: 5%;">
+                <div class="pictures" data-src="https://semantic-ui.com/images/wireframe/image.png">
+                    <img class="ui fluid image" src="https://semantic-ui.com/images/wireframe/image.png">
+                </div>
+            </div>
+            @endfor
+        </div>
     </div>
 </div>
 @include("frontend.core.footer")

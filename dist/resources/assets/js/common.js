@@ -14,5 +14,9 @@ $(document).ready(function () {
     $(".close-button").click(function () {
         $("#modal-post-descriptions").modal("hide");
     });
+
+    $("#light-gallery").lightGallery({
+        selector: ".pictures"
+    });
 });
 //# sourceMappingURL=common.js.map
