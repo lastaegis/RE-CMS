@@ -1,0 +1,5 @@
+</body>
+</html>
+<% htmlWebpackPlugin.files.js.forEach(function(item) {%>
+<script src="{{ URL::asset('<%= item %>') }}" type="text/javascript"></script>
+<% }); %>
