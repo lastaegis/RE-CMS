@@ -12,4 +12,5 @@ require("./plugins/Ripple/dist/ripple.css");
 require("jQuery");
 require("./plugins/Semantic-UI-CSS-master/semantic");
 require("./plugins/Ripple/dist/ripple");
+require("./js/common");
 //# sourceMappingURL=app.js.map

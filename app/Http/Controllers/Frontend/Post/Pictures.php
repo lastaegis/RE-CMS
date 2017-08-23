@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Repository;
+namespace App\Http\Controllers\Frontend\Post;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class Auth extends Controller
+class Pictures extends Controller
 {
     //
 }

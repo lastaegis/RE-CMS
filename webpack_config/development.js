@@ -83,13 +83,13 @@ const config = (env) => {
             }),
             new HtmlWebpackPlugin({
                 chunks: ['vendor','main'],
-                filename: "../../resources/views/core/header.blade.php",
+                filename: "../../resources/views/frontend/core/header.blade.php",
                 template: "./resources/assets/templates/header.ejs",
                 inject: false
             }),
             new HtmlWebpackPlugin({
                 chunks: ['vendor','main'],
-                filename: "../../resources/views/core/footer.blade.php",
+                filename: "../../resources/views/frontend/core/footer.blade.php",
                 template: "./resources/assets/templates/footer.ejs",
                 inject: false
             })

@@ -11,19 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[
+    "as"    => "/",
+    "uses"  => "Frontend\Landing@view"
+]);
 
-Route::group(["prefix" => "admin", "namespace" => "Admin\Module"], function(){
-    Route::group(["namespace" => "Auth"], function(){
-        Route::get("/", [
-            "as"    => "/",
-            "uses"  => "Login@view"
-        ]);
-
-        Route::get("forget-password", function(){
-            echo "Forget Password";
-        });
-    });
-});
+Route::get('/post',[
+    "as"    => "/post",
+    "uses"  => "Frontend\Post@view"
+]);

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Module\Auth;
+namespace App\Http\Controllers\Frontend\Post;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class Logout extends Controller
+class Home extends Controller
 {
     //
 }
