@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../resources/assets/plugins/backend/dropzone-master/index.js"],"names":["module","exports","require"],"mappings":";;AAAAA,OAAOC,OAAP,GAAiBC,QAAQ,mBAAR,CAAjB,C,CAA+C","file":"index.js","sourcesContent":["module.exports = require(\"./lib/dropzone.js\"); // Exposing dropzone\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../../resources/assets/js/backend/select2/init.js"],"names":["$","select2"],"mappings":"AAAA;;AACAA,EAAE,UAAF,EAAcC,OAAd","file":"init.js","sourcesContent":["\"use strict\";\n$(\".select2\").select2();"]}

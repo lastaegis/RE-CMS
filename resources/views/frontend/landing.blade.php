@@ -1,10 +1,11 @@
-@include("frontend.core.header")
-@include("frontend.core.menu")
+@extends("frontend.core.frontend-layout")
+@section("menu")
+    @include("frontend.core.menu")
+@endsection
+@section("content")
 <div class="ui container">
     <div class="ui stackable grid">
-        @for($i = 0; $i < 3; $i++)
-        <div class="row">
-            @for($j = 0; $j < 4; $j++)
+        @foreach($cafeList as $cafe)
             <div class="four wide column">
                 <div class="ui special cards">
                     <div class="card">
@@ -16,11 +17,11 @@
                             <div class="ui dimmer">
                                 <div class="content">
                                     <div class="center">
-                                        <div class="ui inverted button read-more">Read More</div>
+                                        <div class="ui inverted button read-more" cafe-id="{{ \Illuminate\Support\Facades\Crypt::encryptString($cafe->id) }}">Read More</div>
                                     </div>
                                 </div>
                             </div>
-                            <img src="https://semantic-ui.com/images/wireframe/image.png">
+                            <img src="{{ URL::asset("storage/app/".$cafe->thumbnail[0]->detail->path) }}">
                         </div>
                         <div class="content">
                             <span class="right floated">
@@ -33,9 +34,7 @@
                     </div>
                 </div>
             </div>
-            @endfor
-        </div>
-        @endfor
+        @endforeach
     </div>
 </div>
 <div class="ui modal" id="modal-post-descriptions">
@@ -45,17 +44,16 @@
     </div>
     <div class="image scrolling content">
         <div class="ui medium image">
-            <img src="https://semantic-ui.com/images/wireframe/image.png">
+            <img id="image" src="https://semantic-ui.com/images/wireframe/image.png">
         </div>
         <div class="description">
             <div class="ui header">Description</div>
-            <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
-            <img class="ui wireframe image" src="https://semantic-ui.com/images/wireframe/paragraph.png">
+            <div id="description">This is an example of expanded content that will cause the modal's dimmer to scroll</div>
         </div>
     </div>
     <div class="actions">
         <div class="ui red button close-button">Close</div>
-        <div class="ui blue button">Read More</div>
+        <a href="#" class="ui blue button" id="full-post">Read More</a>
     </div>
 </div>
-@include("frontend.core.footer")
+@endsection

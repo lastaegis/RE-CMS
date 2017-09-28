@@ -8,7 +8,8 @@ var path = require("path");
 var config = function config(env) {
     return {
         entry: {
-            main: "./resources/assets/app.js"
+            frontend: "./resources/assets/app-frontend.js",
+            backend: "./resources/assets/app-backend.js"
         },
         output: {
             path: path.resolve(__dirname, '../public/assets/'),
@@ -56,23 +57,18 @@ var config = function config(env) {
             createDayLabel: "jquery",
             createWeekdayLabel: "jquery"
 
-        }), new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks: function minChunks(module) {
-                return module.context && module.context.indexOf("resources/assets/plugins") !== -1;
-            }
         }), new ExtractTextPlugin({
             filename: "[name].css",
             allChunks: true
         }), new HtmlWebpackPlugin({
-            chunks: ['vendor', 'main'],
-            filename: "../../resources/views/frontend/core/header.blade.php",
-            template: "./resources/assets/templates/header.ejs",
+            chunks: ['frontend'],
+            filename: "../../resources/views/frontend/core/frontend-layout.blade.php",
+            template: "./resources/assets/templates/frontend-layout.ejs",
             inject: false
         }), new HtmlWebpackPlugin({
-            chunks: ['vendor', 'main'],
-            filename: "../../resources/views/frontend/core/footer.blade.php",
-            template: "./resources/assets/templates/footer.ejs",
+            chunks: ['backend'],
+            filename: "../../resources/views/backend/core/backend-layout.blade.php",
+            template: "./resources/assets/templates/backend-layout.ejs",
             inject: false
         })]
     };

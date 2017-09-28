@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind("App\Http\Repository\Contract\CountryInterface","App\Http\Repository\Implement\CountryRepository");
+        $this->app->bind("App\Http\Repository\Contract\AccountInterface","App\Http\Repository\Implement\AccountRepository");
     }
 }

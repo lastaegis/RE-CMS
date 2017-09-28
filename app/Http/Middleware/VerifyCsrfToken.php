@@ -12,6 +12,12 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        //
+        "admin/datatables/country-default",
+        "admin/datatables/province-default",
+        "admin/datatables/city-default",
+        "admin/datatables/district-default",
+        "admin/datatables/cafe-default",
+        "admin/file/create/submit",
+        "admin/helper/detail-file",
     ];
 }
