@@ -38019,10 +38019,54 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -o-transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s;
   transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s;
 }
+@font-face {
+    font-family: 'kievit-pro';
+    src: url(./fonts/kievit-regular.otf);
+}
+
+html{
+    font-family: "kievit-pro", "Arial Black", arial-black;
+}
+
+.story > p{
+    line-height: 2.5em;
+    font-size: 20px;
+}
+
+.card{
+    width: 50% !important;
+    margin: 0 auto !important;
+}
+
+.cards{
+    margin-top: 1% !important;
+}
+
+.description{
+    padding: 2% !important;
+    width: 50% !important;
+}
+
+.image{
+    width: 100% !important;
+}
+
+.no-padding{
+    padding: 0 0 0 0 !important;
+}
+
 .no-margin{
     margin: 0px 0px 0px 0px !important;
 }
 
 .no-top-margin{
     margin-top: 0px !important;
+}
+
+.post{
+    width: 50% !important;
+}
+
+.story{
+    font-family: "kievit-pro", "Arial Black", arial-black;
 }
